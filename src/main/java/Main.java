@@ -1,20 +1,10 @@
-class Super {
-    Super() {
-        System.out.println("Super");
-    }
-}
-public class Main extends Super {
-    Main(){
-        this(1);
-        System.out.println("()");
-    }
-    Main(int i) {
-        System.out.println("(int)");
-    }
+
+public class Main  {
 
     public static void main(String[] args) {
-
-        new Main();
-        //System.out.println("111");
+        String text = "Доброго. Помогите, пожалуйста, с программой. Необходимо подсчитать .";
+        int before = text.length();
+        int after = text.replaceAll("[,.]", "").length();
+        System.out.println("Количество знаков : " + (before - after));
     }
 }
