@@ -1,3 +1,5 @@
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.Objects;
 
 public class House {
@@ -5,18 +7,12 @@ public class House {
     int y;
     int z;
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        House house = (House) o;
-        return x == house.x &&
-                y == house.y &&
-                z == house.z;
+
+    public static void main(String[] args) {
+        String s = "sdfs.sdfdf!ssdf,df,sdfdfs.";
+        int b = s.length();
+        int i = s.replaceAll("[.,!]","").length();
+        System.out.println("i=" + (b-i));
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(x, y, z);
-    }
 }
